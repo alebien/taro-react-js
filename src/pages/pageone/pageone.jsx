@@ -20,7 +20,7 @@ export default class Pageone extends Component {
     return (
       <View className="pageone">
         <Text> Page One! </Text>
-        <button onClick={ this.toBack }>返回首页</button>
+        <button onClick={ this.toBack }>返回首页新</button>
       </View>
     );
   }
