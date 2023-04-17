@@ -1,24 +1,42 @@
-import { Component } from 'react'
-import { View, Text } from '@tarojs/components'
-import './index.less'
+import { Component } from "react";
+import { View, Text } from "@tarojs/components";
+import Taro from "@tarojs/taro";
+import "./index.less";
 
 export default class Index extends Component {
+  componentWillMount() {
+    console.log("componentWillMount");
+  }
 
-  componentWillMount () { }
+  componentDidMount() {
+    console.log("componentDidMount");
+  }
 
-  componentDidMount () { }
+  componentWillUnmount() {
+    console.log("componentWillUnmount");
+  }
 
-  componentWillUnmount () { }
+  componentDidShow() {
+    console.log("componentDidShow");
+  }
 
-  componentDidShow () { }
+  componentDidHide() {
+    console.log("componentDidHide");
+  }
 
-  componentDidHide () { }
+  toPageone() {
+    Taro.navigateTo({ url: "/pages/pageone/pageone" });
+    console.log(123);
+  }
 
-  render () {
+  render() {
     return (
-      <View className='index'>
+      <View className="index">
         <Text>Hello world!</Text>
+        <button onClick={this.toPageone}>
+          to Page One
+        </button>
       </View>
-    )
+    );
   }
 }
